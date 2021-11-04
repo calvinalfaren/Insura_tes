@@ -1,0 +1,28 @@
+<div class="profile">
+  <div class="header">
+    <div class="header-title">Cinta Coding</div>
+    <div class="post-text">Post</div>
+    <div class="header-title" routerLink="/pages/profile" style="cursor: pointer;">Welcome, <span style="color: #5b94ed;">{{username}}</span></div>
+  </div>
+  <div class="body">
+    <div style="cursor: pointer; margin-bottom: 10px;" routerLink="/pages/home">
+      <img src="../.../../../../../assets/img/back.png" alt="" style="height: 20px;">
+    </div>
+    <div>
+      <span>Username  :</span>
+      <strong>{{profileDetail?.username}}</strong>
+    </div>
+    <div>
+      <span>Email  :</span>
+      <strong>{{profileDetail?.email}}</strong>
+    </div>
+    <div>
+      <span>Adress  :</span>
+      <strong>{{profileDetail?.address.city}}, {{profileDetail?.address.street}}, {{profileDetail?.address.suite}}, {{profileDetail?.address.zipcode}}</strong>
+    </div>
+    <div>
+      <span>Phone  :</span>
+      <strong>{{profileDetail?.phone}}</strong>
+    </div>
+  </div>
+</div>

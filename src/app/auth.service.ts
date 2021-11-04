@@ -20,6 +20,7 @@ export class AuthService {
   userKey(user) {
     localStorage.setItem('userKey', user);
     localStorage.setItem('userName', user.username);
+    localStorage.setItem('userId', user.id);
   }
 
   logout() {
