@@ -1,0 +1,35 @@
+.landing {
+  margin: 24px 60px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    &-title {
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .login-btn {
+      background-color: #5b94ec;
+      border: none;
+      border-radius: 90px;
+      padding: 0 26px;
+      color: #fff;
+      box-shadow: 0 4px 4px 0 rgba(172, 172, 172, 5%);
+      cursor: pointer;
+      line-height: 35px;
+    }
+  }
+
+  .body {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+
+    .landing-img {
+      width: 80%;
+      height: 80%;
+    }
+  }
+}

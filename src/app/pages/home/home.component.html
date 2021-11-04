@@ -1,0 +1,27 @@
+<div class="home">
+  <div class="header">
+    <div class="header-title">Cinta Coding</div>
+    <div class="post-text">Post</div>
+    <div class="header-title">Welcome, <span style="color: #5b94ed; cursor: pointer;">{{username}}</span></div>
+  </div>
+  <div class="body">
+    <div class="search-bar">
+      <input type="text" placeholder="Search" width="100%">
+      <img src="../../../assets/img/search.png" alt="">
+    </div>
+    <div class="post-list" *ngFor="let post of listPost | paginate: { itemsPerPage: 10, currentPage: p }">
+      <div class="post-field">
+        <strong>{{ getUsernameByID(post.userId)}}</strong>
+        <div>
+          <div>{{ post.title }}</div>
+          <div style="display: flex; margin-top: 10px; align-items: center;">
+            <img src="../../../assets/img/chat-bubble.png" alt="" style="width: 30px; height: 20px;margin-right: 10px;">
+            <div style="color: #5e90dd; font-size: 15px;font-weight: bold; margin-right: 20px;">5</div>
+            <div style="color: #6091de; font-size: 15px; font-weight: bold; cursor:  pointer;" [routerLink]="'/pages/home/detail/' +post.id">Detail</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
+</div>

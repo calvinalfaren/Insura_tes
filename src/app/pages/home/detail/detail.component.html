@@ -1,0 +1,40 @@
+<div class="detail">
+  <div class="header">
+    <div class="header-title">Cinta Coding</div>
+    <div class="post-text">Post</div>
+    <div class="header-title">Welcome, <span style="color: #5b94ed;">{{username}}</span></div>
+  </div>
+  <div class="body">
+    <div style="cursor: pointer; margin-bottom: 10px;" routerLink="/pages/home">
+      <img src="../.../../../../../assets/img/back.png" alt="" style="height: 20px;">
+    </div>
+    <div style="margin-bottom: 15px; color: #b5b5b5; margin-left: 50px;">{{ postDetail?.title }}</div>
+    <div style="display: flex;">
+        <strong style="margin-right: 15px;">{{ getUsernameByID(postDetail?.userId)}}</strong>
+        <div style="color: #e0e0e0;">{{ postDetail?.body }}</div>
+
+    </div>
+    <div style="margin-left: 50px;">
+      <div style="display: flex; margin-top: 15px; cursor: pointer;" *ngIf="!allComment" (click)="allCommentOpen()">
+        <img src="../../../../assets/img/chat-bubble.png" alt="" style="height: 25px; margin-right: 15px; width: 30px;">
+        <div style="color: #5e90dd; font-size: 15px;font-weight: bold; margin-right: 20px;">5</div>
+      </div>
+      <div *ngIf="allComment">
+        <div style="margin: 10px 0; cursor: pointer; color: #a5a5a5;" (click)="allCommentOpen()">All Comment</div>
+        <div *ngFor="let comment of listComment">
+          <div style="display: flex;">
+            <div style="width: 100px;">
+              <strong style="display: inline-block;
+              width: 80px;
+              white-space: nowrap;
+              overflow: hidden !important;
+              text-overflow: ellipsis;">{{comment.name}}</strong>
+            </div>
+            <div>{{comment.body}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
